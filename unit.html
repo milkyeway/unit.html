@@ -23,7 +23,7 @@
             display:inline-block;
             position: relative;
         }
-        .box2{
+        .box2, .box3, .box4{
             background: linear-gradient( 60deg, rgb(254, 223, 225) ,rgb(238, 169, 169) );
             width: calc(10vw*9/12);
             height: calc(10vw*9/12);
@@ -31,9 +31,22 @@
             top:35%;
             right: 35%;
             transition: .5s;
+            /* 反應時間 */
+        }
+        .box2, .box4{
+            border-radius: 50%;
+            /* 園角 */
         }
         .box1 .box2:hover{
             transform: scale(2.5);
+            /* 放大大小 */
+        }
+        .box .box4:hover, .box3:hover{
+            transform: scale(-2, -1);
+            /* scale(sx, sy)，控制反射後再進行大小修改 */
+            /* (X, Y)不相同時即長方形 ，border-radius: 50%即橢圓*/
+            /* 顏色相反顛倒 (感應有點敏感，可能會出現抖動)*/
+            /* 但橢圓比長方形正常 */
         }
     </style>
 </head>
@@ -43,8 +56,11 @@
         <div class="ned">hello inside of div</div>
     </div>
     <div class="box">
-        
+        <div class="box3"></div>
     </div>
+    <div class="box">
+            <div class="box4"></div>
+        </div>
     <div class="box1">
         <div class="box2"></div>
         </div>
