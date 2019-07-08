@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Unit</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        div{
+            font-size: 2.5rem;
+        }
+        div .ned{
+            font-size: 1.5rem;
+        }
+        .box, .box1{
+            width: calc(30vw*9/12);
+            height: calc(30vw*9/12);
+            background:paleturquoise;
+            margin: 8px 4px;
+            display:inline-block;
+            position: relative;
+        }
+        .box2{
+            background: #000;
+            width: calc(10vw*9/12);
+            height: calc(10vw*9/12);
+            position: absolute;
+            top:35%;
+            right: 35%;
+            transition: .5s;
+        }
+        .box1 .box2:hover{
+            transform: scale(2.5);
+        }
+    </style>
+</head>
+<body>
+    hello
+    <div>hello in div 
+        <div class="ned">hello in in div</div>
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box1">
+        <div class="box2"></div>
+        </div>
+</body>
+</html>
